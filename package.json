@@ -6,10 +6,6 @@
   "scripts": {
     "test": "script"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://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@github.com/samuelnonyelu/Zure-Nodejs-week-5.git"
-  },
   "author": "Samuel Nonyelu",
   "license": "ISC",
   "bugs": {
