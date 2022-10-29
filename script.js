@@ -2,8 +2,18 @@
 
 const http = require('http');
 const fs = require('fs');
+const path = require('path');
 const port = 42069;
 
+const server = http.createServer((req, res) => {
+    if (req.url === '/'){
+        let filePath = path.join(__dirname, 'index.html');
+        fs.readFile(filePath, 'utf8', (error, data) => {
+            res.writeHead(200, {'Content-Type': 'text/html'});
+            res.end(data);
+        });
+    }
+})
 
 // const server = http.createServer(function(req, res){
 //     res.writeHead(200, {'Content-Type': 'text/html'})
@@ -18,7 +28,7 @@ const port = 42069;
 //     })
 // });
 
-server.listen(port, function(error){
+server.listen(port, (error) => {
     if (error){
         console.log("An error occured dipshit", error);
     }
