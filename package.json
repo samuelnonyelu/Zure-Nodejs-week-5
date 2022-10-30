@@ -4,7 +4,8 @@
   "description": "Week 5 task for nodejs",
   "main": "script.js",
   "scripts": {
-    "test": "script"
+    "start": "node script.js",
+    "dev": "nodemon script.js"
   },
   "author": "Samuel Nonyelu",
   "license": "ISC",
